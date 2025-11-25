@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVE: Origination Brief</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0F172A; /* Slate 900 */
+            --bg-light: #1E293B; /* Slate 800 */
+            --border: #334155;   /* Slate 700 */
+            --text-light: #94A3B8; /* Slate 400 */
+            --text-body: #CBD5E1; /* Slate 300 */
+            --text-heading: #F8FAFC; /* Slate 50 */
+            --brand-blue: #3B82F6; /* Blue 500 */
+            --brand-green: #22C55E; /* Green 500 */
+            --brand-orange: #F97316; /* Orange 500 */
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+        h1, h2, h3 { color: var(--text-heading); margin-top: 0; line-height: 1.2; }
+        h1 { font-size: 1.8rem; font-weight: 700; }
+        h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; }
+        h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; font-size: 1rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: center; }
+        .badge { background: rgba(59, 130, 246, 0.15); color: var(--brand-blue); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .panel { background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .feature-box { background: var(--bg-dark); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px; }
+        .feature-icon { color: var(--brand-blue); margin-bottom: 0.75rem; }
+        .feature-icon svg { width: 1.5rem; height: 1.5rem; }
+        .tech-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        .tech-table td { padding: 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .tech-table tr:last-child td { border-bottom: none; }
+        .tech-label { color: var(--text-light); font-size: 0.9rem; width: 30%; }
+        .tech-value { color: var(--text-heading); font-weight: 500; }
+        .report-ui { background: #0B1019; border: 1px solid #2D3748; border-radius: 8px; padding: 1.5rem; font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: #A0AEC0; }
+        .report-ui strong { color: #fff; }
+        .status-pass { color: var(--brand-green); font-weight: bold; }
+        .status-fail { color: var(--brand-orange); font-weight: bold; }
+        .btn { display: inline-block; background: var(--brand-blue); color: white; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 600; transition: all 0.2s; }
+        .btn:hover { background: #2563EB; transform: translateY(-1px); }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } header { flex-direction: column; align-items: flex-start; gap: 1rem; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Land Viability Engine (LVE)</h1>
+                <p style="margin:0; color: var(--text-light);">Technical Product Brief for Origination Teams</p>
+            </div>
+            <div class="badge">Technology Overview</div>
+        </header>
+
+        <section class="panel">
+            <h2>Executive Summary</h2>
+            <p>LVE is an automated geospatial screening platform designed to accelerate the "First Pass" assessment of renewable energy sites. It replaces manual Google Earth verification with an instant, standardized audit of physical constraints.</p>
+            <p><strong>Core Function:</strong> Instantly qualifies or disqualifies a site based on 4 non-negotiable physical criteria (Slope, Access, Land Use, Grid).</p>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 1.5rem;">The 4-Point Screening Standard</h2>
+            <div class="grid-4">
+                <div class="feature-box">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg></div>
+                    <h3>Slope Analysis</h3>
+                    <p style="font-size: 0.9rem;">Checks median slope against <strong>standardized constructability thresholds</strong> to flag high civil works risks.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg></div>
+                    <h3>Grid Proximity</h3>
+                    <p style="font-size: 0.9rem;">Calculates distance to nearest viable substation or transmission corridor.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" /></svg></div>
+                    <h3>Land Use</h3>
+                    <p style="font-size: 0.9rem;">Flags non-viable zones such as <strong>built-up areas, water bodies, and wetlands</strong>.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg></div>
+                    <h3>Road Access</h3>
+                    <p style="font-size: 0.9rem;">Verifies proximity to main roads for construction logistics and heavy equipment.</p>
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="grid-2">
+            <div>
+                <h2>Technical Architecture</h2>
+                <table class="tech-table">
+                    <tr>
+                        <td class="tech-label">Spatial Unit</td>
+                        <td class="tech-value">S2 Geometry (Level 13 Cells)</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-label">Resolution</td>
+                        <td class="tech-value">~1.2 km² per zone</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-label">Processing</td>
+                        <td class="tech-value">Pre-computed Offline (Python)</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-label">Data Strategy</td>
+                        <td class="tech-value">Objective Third-Party Data (Open Street Map, USGS SRTM, ESA WorldCover)</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-label">Deployment</td>
+                        <td class="tech-value">Secure Cloud Web App (No desktop GIS required)</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Output Example</h2>
+                <p style="color: var(--text-light); font-size: 0.9rem;">The Origination team receives an instant scorecard:</p>
+                <div class="report-ui">
+                    <div style="border-bottom: 1px solid #4A5568; padding-bottom: 0.8rem; margin-bottom: 0.8rem;">
+                        <strong>ZONE ID: 3396f77c</strong><br>
+                        VERDICT: <span class="status-pass">PASS (Score: 9.2/10)</span>
+                    </div>
+                    <div>
+                        > Grid Proximity: <span class="status-pass">PASS</span><br>
+                        <span style="color:#718096; font-size:0.8rem; margin-left: 1rem;">(Inside Priority Band)</span><br><br>
+                        > Slope Suitability: <span class="status-pass">PASS</span><br>
+                        <span style="color:#718096; font-size:0.8rem; margin-left: 1rem;">(Buildable / Flat Terrain)</span><br><br>
+                        > Land Use: <span class="status-pass">PASS</span><br>
+                        <span style="color:#718096; font-size:0.8rem; margin-left: 1rem;">(Open / Scrub Land)</span><br><br>
+                        > Road Access: <span class="status-pass">PASS</span><br>
+                        <span style="color:#718096; font-size:0.8rem; margin-left: 1rem;">(Direct Road Frontage)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="panel" style="border-left: 4px solid var(--brand-green);">
+            <h3 style="color: var(--brand-green);">Why this works for Origination</h3>
+            <p>Instead of requesting GIS analysis for every raw lead, the Origination team uses LVE to filter the "noise" instantly. This ensures your GIS and Engineering experts only spend time simulating sites that have already passed the physical viability threshold.</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="margin-bottom: 1.5rem;">Watch the 20-second engine preview:</p>
+            <a href="https://www.loom.com/share/a3714c1c7908464b88b5b25c2524ba36" class="btn" target="_blank">
+                <svg style="width:1rem; height:1rem; vertical-align:middle; margin-right:0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Watch Preview Video
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
